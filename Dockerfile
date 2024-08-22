@@ -12,10 +12,10 @@ RUN apk add --no-cache \
     tar \
     && mkdir -p /frp \
     && cd /frp \
-    && wget https://github.com/fatedier/frp/releases/download/v${FRPC_VERSION}/frp_${FRPC_VERSION}_linux_arm64.tar.gz -O frp.tar.gz \
+    && wget https://github.com/fatedier/frp/releases/download/v${FRPC_VERSION}/frp_${FRPC_VERSION}_linux_amd64.tar.gz -O frp.tar.gz \
     && tar -xzf frp.tar.gz \
-    && mv frp_${FRPC_VERSION}_linux_arm64/frpc . \
-    && rm -rf frp.tar.gz frp_${FRPC_VERSION}_linux_arm64  
+    && mv frp_${FRPC_VERSION}_linux_amd64/frpc . \
+    && rm -rf frp.tar.gz frp_${FRPC_VERSION}_linux_amd64  
 
 # 复制配置文件  
 COPY frpc.toml /frp/frpc.toml  
