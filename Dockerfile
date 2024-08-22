@@ -10,6 +10,7 @@ ENV FRPC_PATH=/frp/frpc
 RUN apk add --no-cache \
     wget \
     tar \
+    vim \
     && mkdir -p /frp \
     && cd /frp \
     && wget https://github.com/fatedier/frp/releases/download/v${FRPC_VERSION}/frp_${FRPC_VERSION}_linux_amd64.tar.gz -O frp.tar.gz \
