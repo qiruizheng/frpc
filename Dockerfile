@@ -19,10 +19,10 @@ RUN apk add --no-cache \
     && rm -rf frp.tar.gz frp_${FRPC_VERSION}_linux_amd64  
 
 # 复制配置文件  
-COPY frpc.toml /frp/config/frpc.toml  
+COPY frpc.toml /frp/frpc.toml  
 
 # 设置工作目录  
 WORKDIR /frp  
 VOLUME /frp/config
 # 启动 FRPC  
-CMD ["./frpc", "-c", "/frp/config/frpc.toml"]
+CMD ["./frpc", "-c", "frpc.toml"]
