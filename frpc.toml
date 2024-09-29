@@ -1,9 +1,49 @@
 serverAddr = "xx.xx.xx.xx"
 serverPort = 7000
 
+webServer.addr = "192.168.2.220"
+webServer.port = 7400
+webServer.user = "admin"
+webServer.password = "Qiruizheng199303"
+
+
 [[proxies]]
 name = "rdp"
 type = "tcp"
 localIP = "192.168.2.212"
 localPort = 3389
 remotePort = 3389
+
+[[proxies]]
+name = "webdav"
+type = "tcp"
+localIP = "192.168.2.220"
+localPort = 5005
+remotePort = 5005
+
+[[proxies]]
+name = "nastool"
+type = "tcp"
+localIP = "192.168.2.220"
+localPort = 4000
+remotePort = 4000
+
+[[proxies]]
+name = "admin_ui"
+type = "tcp"
+localPort = 7400
+remotePort = 7400
+
+[[proxies]]
+name = "cloudbak"
+type = "tcp"
+localIP = "192.168.2.220"
+localPort = 9527
+remotePort = 9527
+
+[[proxies]]
+name = "siyuan"
+type = "tcp"
+localIP = "192.168.2.220"
+localPort = 3003
+remotePort = 3003
